@@ -1,14 +1,13 @@
-function convertirTemperatura(){
+function temperatura(){
 
-    const temperaturaCelsius = prompt("Ingrese una temperatura en grados Celsius: ")//pedir la temperatura en °C
-    
-    if (isNaN(temperaturaCelsius)){//Comprueba si el prompt corresponde a número
+    const temperaturaCelsius = prompt("Ingrese una temperatura en grados Celsius: ")
+    if (isNaN(temperaturaCelsius)){
     
         alert("Porfavor, ingresa un valor numérico.");
-        convertirTemperatura();
+        temperatura();
         return;
     }
-        //Convertir a fahrenheit y kelvin
+        
         let temperaturaFahrenheit = (Number(temperaturaCelsius) * 9/5) + 32;
         let temperaturaKelvin = Number(temperaturaCelsius) + 273;
         
@@ -16,4 +15,5 @@ function convertirTemperatura(){
         console.log(`Temperatura en Kelvin: ` + temperaturaKelvin + `K`);
     
     }
-    convertirTemperatura();
+    temperatura();
+
